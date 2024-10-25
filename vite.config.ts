@@ -4,4 +4,12 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), vueJsx()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // 这里可以放置全局 SCSS 变量、混合等
+        additionalData: `@import "./global/style/global.scss";`,
+      },
+    },
+  },
 });
