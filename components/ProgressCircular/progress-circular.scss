@@ -1,0 +1,33 @@
+.router {
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.path {
+  stroke-dasharray: 70, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 70, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  75% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+  100% {
+    stroke-dasharray: 120, 200;
+    stroke-dashoffset: 0;
+  }
+}

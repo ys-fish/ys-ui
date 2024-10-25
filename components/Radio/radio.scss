@@ -1,0 +1,50 @@
+.c-radio {
+    min-width: 60px;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    .c-radio-sele {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .c_radio_icon {
+            width: 24px;
+            height: 24px;
+
+            .iconcircle {
+                display: none;
+            }
+        }
+
+        .radio_sele_mock {
+            width: 34px;
+            position: absolute;
+            height: 34px;
+            border-radius: 50%;
+            z-index: 1231232;
+            overflow: hidden;
+            background-color: rgba($color: black, $alpha: 0);
+        }
+    }
+
+    .radiobtn {
+        position: absolute;
+        opacity: 0;
+    }
+    .c-radio-label{
+        font-size: 14px;
+    }
+}
+
+.c_radio_checked {
+    .iconcircle {
+        display: block !important;
+    }
+}
