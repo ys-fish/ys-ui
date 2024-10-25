@@ -3,10 +3,10 @@ import Button from "../components/Button/index";
 import ProgressCircular from "../components/ProgressCircular/index";
 import RadioGroup from "../components/RadioGroup";
 import Radio from "../components/Radio";
-
+import Input from "../components/Input";
 import { RippleFuc } from "../directive/ripple";
 
-const ys = [Button, ProgressCircular, RadioGroup, Radio];
+const ys = [Button, ProgressCircular, RadioGroup, Radio, Input];
 
 export const install = (app: App) => {
   ys.forEach((v) => {
