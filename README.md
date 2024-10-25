@@ -1,5 +1,9 @@
-# Vue 3 + TypeScript + Vite
+<p align="center">
+  <img width="144px" src="./public/logo.png" />
+</p>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<h1 align="center">YS UI</h1>
+<p align="center">一个 Vue 3 组件库</p>
+<p align="center"><b>比较完整，主题可调，使用 TypeScript，快</b></p>
+<p align="center">有点意思</p>
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
