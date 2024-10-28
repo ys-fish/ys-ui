@@ -119,6 +119,18 @@
 
   <div style="margin-top: 20px">
     <div>
+      <div>Icon测试</div>
+    </div>
+    <div style="margin-top: 20px; display: flex; gap: 20px">
+      <div>
+        <div style="margin-bottom: 10px">左图标测试</div>
+        <y-button type="default" startIcon="home">左图标按钮</y-button>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px">
+    <div>
       <div>loading测试</div>
     </div>
     <div style="margin-top: 20px; display: flex; gap: 20px">

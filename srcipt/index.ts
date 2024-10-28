@@ -5,8 +5,9 @@ import RadioGroup from "../components/RadioGroup";
 import Radio from "../components/Radio";
 import Input from "../components/Input";
 import { RippleFuc } from "../directive/ripple";
-
-const ys = [Button, ProgressCircular, RadioGroup, Radio, Input];
+import "@mdi/font/css/materialdesignicons.css";
+import Icon from "../components/Icon";
+const ys = [Button, ProgressCircular, RadioGroup, Radio, Input, Icon];
 
 export const install = (app: App) => {
   ys.forEach((v) => {

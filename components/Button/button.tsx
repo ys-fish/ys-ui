@@ -118,16 +118,16 @@ const Button = defineComponent({
       >
         {loading.value ? (
           <div class="loading">
-            <div class="loading_box">
-
-            </div>
+            <div class="loading_box"></div>
             <span style={{ opacity: 0 }}>
               {slots.default && slots.default()}
             </span>
           </div>
         ) : (
-          <div>
+          <div class="y_button_flex">
+            <y-icon icon={startIcon.value}></y-icon>
             <span>{slots.default && slots.default()}</span>
+            <y-icon icon={endIcon.value}></y-icon>
           </div>
         )}
       </button>
