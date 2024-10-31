@@ -1,0 +1,18 @@
+.y_list_group {
+  height: auto;
+  transition: 0.3s;
+}
+.y_list_group_box {
+  max-height: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.y_list_group_auto {
+  max-height: 200px !important;
+}
+
+.y_list_group_list{
+    box-sizing: border-box;
+    padding-left: 30px;
+}

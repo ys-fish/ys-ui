@@ -1,0 +1,38 @@
+.y_list_item {
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  line-height: 45px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .y_list_item_left {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.y_list_small {
+  .y_list_item {
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+  }
+}
+
+.y_list_large {
+  .y_list_item {
+    height: 54px;
+    font-size: 18px;
+    line-height: 54px;
+  }
+}
+.y_list_nav {
+  .y_list_item {
+    border-radius: 5px;
+  }
+}

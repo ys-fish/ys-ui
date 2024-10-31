@@ -4,10 +4,23 @@ import ProgressCircular from "../components/ProgressCircular/index";
 import RadioGroup from "../components/RadioGroup";
 import Radio from "../components/Radio";
 import Input from "../components/Input";
+import List from "../components/List";
+import ListItem from "../components/ListItem";
+import ListGroup from "../components/ListGroup";
 import { RippleFuc } from "../directive/ripple";
 import "@mdi/font/css/materialdesignicons.css";
 import Icon from "../components/Icon";
-const ys = [Button, ProgressCircular, RadioGroup, Radio, Input, Icon];
+const ys = [
+  Button,
+  ProgressCircular,
+  RadioGroup,
+  Radio,
+  Input,
+  Icon,
+  List,
+  ListItem,
+  ListGroup,
+];
 
 export const install = (app: App) => {
   ys.forEach((v) => {
