@@ -10,6 +10,7 @@ import ListGroup from "../components/ListGroup";
 import { RippleFuc } from "../directive/ripple";
 import "@mdi/font/css/materialdesignicons.css";
 import Icon from "../components/Icon";
+import Model from "../components/Model";
 const ys = [
   Button,
   ProgressCircular,
@@ -20,6 +21,7 @@ const ys = [
   List,
   ListItem,
   ListGroup,
+  Model,
 ];
 
 export const install = (app: App) => {
