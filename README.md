@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="144px" src="./public/login.png.png" />
+  <img width="144px" src="./public/login.png" />
 </p>
 
 <h1 align="center">YS UI</h1>
