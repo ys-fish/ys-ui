@@ -11,6 +11,11 @@ import { RippleFuc } from "../directive/ripple";
 import "@mdi/font/css/materialdesignicons.css";
 import Icon from "../components/Icon";
 import Model from "../components/Model";
+import Drawer from "../components/Drawer";
+import Home from "../components/Home";
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Menu from "../components/Menu";
 const ys = [
   Button,
   ProgressCircular,
@@ -22,8 +27,14 @@ const ys = [
   ListItem,
   ListGroup,
   Model,
+  Drawer,
+  Home,
+  Header,
+  Main,
+  Menu,
 ];
 
+// 注册入口
 export const install = (app: App) => {
   ys.forEach((v) => {
     app.component(v.name, v);

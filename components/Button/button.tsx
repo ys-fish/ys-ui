@@ -125,9 +125,13 @@ const Button = defineComponent({
           </div>
         ) : (
           <div class="y_button_flex">
-            <y-icon icon={startIcon.value}></y-icon>
+            <y-icon
+              v-show={startIcon.value}
+              color={isColors ? "black" : "white"}
+              icon={startIcon.value}
+            ></y-icon>
             <span>{slots.default && slots.default()}</span>
-            <y-icon icon={endIcon.value}></y-icon>
+            <y-icon v-show={endIcon.value} icon={endIcon.value}></y-icon>
           </div>
         )}
       </button>

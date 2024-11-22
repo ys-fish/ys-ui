@@ -1,6 +1,6 @@
 <template>
   <div>
-    <y-button>打开</y-button>
+    <y-button @click="a = true">打开</y-button>
     <y-model v-model="a"></y-model>
   </div>
 </template>

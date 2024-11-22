@@ -9,10 +9,14 @@
   font-size: 14px;
   display: flex;
   align-items: center;
+  transition: 0.3s ease;
   justify-content: space-between;
   .y_list_item_left {
     display: flex;
     gap: 20px;
+  }
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 

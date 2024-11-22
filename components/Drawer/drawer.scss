@@ -1,0 +1,33 @@
+.y_drawer_box {
+  .y_drawer {
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background: white;
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+      0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    z-index: 1;
+  }
+  .y_drawer_tran {
+    transform: translateX(0%);
+  }
+  .y_drawer_mask {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+    opacity: 0;
+    display: none;
+  }
+  .y_drawer_mask_tran {
+    opacity: 1;
+    display: block !important;
+  }
+}
