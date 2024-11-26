@@ -1,4 +1,4 @@
-import { defineComponent, toRefs } from "vue";
+import { defineComponent, provide, reactive, toRefs } from "vue";
 import "./list.scss";
 const sizeType = ["small", "default", "large"] as const;
 const List = defineComponent({
@@ -22,9 +22,19 @@ const List = defineComponent({
         return sizeType.includes(value);
       },
     },
+    active: {
+      type: String,
+      default: "",
+    },
   },
   setup(props, { slots }) {
-    const { nav, size } = toRefs(props);
+    const { nav, size, active } = toRefs(props);
+
+    let data = reactive({
+      active: active,
+    });
+
+    provide("data", data);
     return () => (
       <div
         class={["y_list", "y_list_" + size.value, { y_list_nav: nav.value }]}

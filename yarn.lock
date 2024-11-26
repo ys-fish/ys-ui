@@ -858,6 +858,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/highlight.js@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "@types/highlight.js@npm:10.1.0"
+  dependencies:
+    highlight.js: "*"
+  checksum: 284f47e89bfe300f307ad76523a257ff12ed7cf0318cdc0a7fe6965a1d7e21840d133cfc623ec705495550d37341c278c2c9641bafce8b8dbb4bea4acd46f0ec
+  languageName: node
+  linkType: hard
+
 "@vitejs/plugin-vue-jsx@npm:^4.0.1":
   version: 4.0.1
   resolution: "@vitejs/plugin-vue-jsx@npm:4.0.1"
@@ -1162,8 +1171,10 @@ __metadata:
   resolution: "app@workspace:."
   dependencies:
     "@mdi/font": ^7.4.47
+    "@types/highlight.js": ^10.1.0
     "@vitejs/plugin-vue": ^5.1.4
     "@vitejs/plugin-vue-jsx": ^4.0.1
+    highlight.js: ^11.10.0
     sass: ^1.80.3
     typescript: ^5.5.3
     vite: ^5.4.8
@@ -1637,6 +1648,13 @@ __metadata:
   bin:
     he: bin/he
   checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:*, highlight.js@npm:^11.10.0":
+  version: 11.10.0
+  resolution: "highlight.js@npm:11.10.0"
+  checksum: 65f89966a164f283a3083ce90f65d6f78c5d91c2ab753c70dc2f1d117ee8fe982ed428e51e663c37c562c88b7dad18cdd84769e522f0f8764462c448017c6dfa
   languageName: node
   linkType: hard
 

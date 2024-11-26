@@ -16,6 +16,9 @@ import Home from "../components/Home";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Menu from "../components/Menu";
+import Chip from "../components/Chip";
+import Checkbox from "../components/Checkout";
+import Table from "../components/Table";
 const ys = [
   Button,
   ProgressCircular,
@@ -32,6 +35,9 @@ const ys = [
   Header,
   Main,
   Menu,
+  Chip,
+  Checkbox,
+  Table,
 ];
 
 // 注册入口

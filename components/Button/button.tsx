@@ -57,8 +57,8 @@ const Button = defineComponent({
       },
     },
     ripple: {
-      type: String,
-      default: "#78909C",
+      type: Boolean,
+      default: true,
     },
     color: {
       type: String,
@@ -66,21 +66,18 @@ const Button = defineComponent({
     },
     // 圆角
     rounded: {
-      type: Boolean,
-      default: false,
-      validator: (value: boolean) => {
-        if (typeof value == "boolean") {
-          return true;
-        } else {
-          return false;
-        }
-      },
+      type: String,
+      default: "",
     },
     startIcon: {
       type: String,
       default: "",
     },
     endIcon: {
+      type: String,
+      default: "",
+    },
+    icon: {
       type: String,
       default: "",
     },
@@ -98,6 +95,7 @@ const Button = defineComponent({
       size,
       block,
       loading,
+      icon,
     } = toRefs(props);
     let colorD = color.value ? color.value : "#78909C";
     let colorT = color.value ? `rgba(255,255,255,.6)` : "#78909C";
@@ -109,11 +107,15 @@ const Button = defineComponent({
           "y_button",
           "y_button_" + type.value,
           "y_button_size_" + size.value,
-          { y_rounded: rounded.value, y_block: block.value },
+          "y_rounded_" + rounded.value,
+          {
+            y_block: block.value,
+            y_button_icon: icon.value,
+          },
         ]}
         style={{ background: color.value, color: isColors ? "black" : "white" }}
-        v-ripple={colorT}
-        accesskey={colorT}
+        v-ripple={ripple.value ? colorT : ""}
+        accesskey={ripple.value ? colorT : ""}
         disable={disable.value}
       >
         {loading.value ? (
@@ -130,7 +132,8 @@ const Button = defineComponent({
               color={isColors ? "black" : "white"}
               icon={startIcon.value}
             ></y-icon>
-            <span>{slots.default && slots.default()}</span>
+            <y-icon size="20" v-show={icon.value} icon={icon.value}></y-icon>
+            <span v-show={!icon.value}>{slots.default && slots.default()}</span>
             <y-icon v-show={endIcon.value} icon={endIcon.value}></y-icon>
           </div>
         )}

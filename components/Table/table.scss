@@ -1,0 +1,41 @@
+.y_table {
+  border: 1px #ccc solid;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  thead {
+    margin: 0;
+    padding: 0;
+    tr {
+      height: 48px;
+      width: 100%;
+      border-bottom: 1px #ccc solid;
+      th {
+        width: 100%;
+        padding: 0 16px;
+        border-bottom: thin solid #ccc;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+  tbody {
+    margin: 0;
+    padding: 0;
+    tr {
+      height: 44px;
+      width: 100%;
+      border-bottom: 1px #ccc solid;
+      td {
+        width: 100%;
+        padding: 0 16px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.text_left {
+  text-align: left;
+}

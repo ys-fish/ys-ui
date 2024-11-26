@@ -14,16 +14,22 @@
   .y_list_item_left {
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   &:hover {
     background: rgba(0, 0, 0, 0.1);
   }
+}
+.y_list_item_active {
+  background: rgba(21, 101, 192, 0.1);
+  
 }
 
 .y_list_small {
   .y_list_item {
     height: 32px;
     font-size: 12px;
+    font-weight: 500;
     line-height: 32px;
   }
 }

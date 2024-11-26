@@ -16,6 +16,15 @@
   outline: none;
   border: none;
 }
+.y_button_icon {
+  border-radius: 50%;
+  padding: 0px !important;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .y_button_flex {
   display: flex;
   align-items: center;
@@ -50,7 +59,13 @@
 .y_button_outlined {
   border: 1px black solid;
 }
-
+.y_button_text {
+  background: transparent;
+  transition: 0.3s;
+  &:hover {
+    background: rgba(0, 0, 0, 0.14);
+  }
+}
 // 圆角按钮样式
 .y_rounded {
   border-radius: 20px;
@@ -72,4 +87,25 @@
     top: 0px;
     background: red;
   }
+}
+
+// 圆角按钮
+.y_rounded_0 {
+  border-radius: 0px !important;
+}
+
+.y_rounded_xs {
+  border-radius: 2px;
+}
+
+.y_rounded_sm {
+  border-radius: 3px;
+}
+
+.y_rounded_lg {
+  border-radius: 8px;
+}
+
+.y_rounded_xl {
+  border-radius: 20px;
 }
