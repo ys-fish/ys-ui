@@ -108,6 +108,7 @@ const Button = defineComponent({
           "y_button_" + type.value,
           "y_button_size_" + size.value,
           "y_rounded_" + rounded.value,
+          color.value,
           {
             y_block: block.value,
             y_button_icon: icon.value,

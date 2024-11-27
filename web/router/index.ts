@@ -48,6 +48,13 @@ const routes: RouteRecordRaw[] = [
             name: "Log",
             component: () => import("../pages/introduce/log.vue"),
           },
+
+          // 入门
+          {
+            path: "/introduction/install",
+            name: "Install",
+            component: () => import("../pages/introduction/install.vue"),
+          },
         ],
       },
     ],

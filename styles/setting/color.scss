@@ -1,0 +1,73 @@
+@use "sass:map";
+
+$shades: () !default;
+// $shades: map-deep-merge(
+//   (
+//     "black": #000000,
+//     "white": #ffffff,
+//     "transparent": #cccccc,
+//   ),
+//   $shades
+// );
+
+// $text-on-shades: () !default;
+// $text-on-shades: map-deep-merge(
+//   (
+//     "black": map.get($shades, "white"),
+//     "white": map.get($shades, "black"),
+//     "transparent": currentColor,
+//   ),
+//   $text-on-shades
+// );
+
+$red: (
+  "red-1": #ffebee,
+  "red-2": #ffcdd2,
+  "red-3": #ef9a9a,
+  "red-4": #e57373,
+  "red-5": #ef5350,
+  "red-6": #f44336,
+  "red-7": #e53935,
+  "red-8": #d32f2f,
+  "red-9": #c62828,
+  "red-10": #b71c1c,
+  "red-11": #ff8a80,
+  "red-12": #ff5252,
+  "red-13": #ff1744,
+  "red": #d50000,
+);
+
+@each $name, $color in $red {
+  .#{$name} {
+    color: #ffffff !important;
+  }
+  .#{$name} {
+    background: $color !important;
+  }
+}
+
+$pink: (
+  "pink-1": #fce4ec,
+  "pink-2": #f8bbd0,
+  "pink-3": #f48fb1,
+  "pink-4": #f06292,
+  "pink-5": #ec407a,
+  "pink-6": #e91e63,
+  "pink-7": #d81b60,
+  "pink-8": #c2185b,
+  "pink-9": #ad1457,
+  "pink-10": #880e4f,
+  "pink-11": #ff80ab,
+  "pink-12": #ff4081,
+  "pink-13": #f50057,
+  "pink": #c51162,
+);
+
+@each $name, $color in $pink {
+  .#{$name} {
+    color: #ffffff !important;
+  }
+  .#{$name} {
+    background: $color !important;
+  }
+}

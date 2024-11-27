@@ -37,7 +37,9 @@
           <y-button type="text" size="small">Text</y-button>
         </template>
         <template #left>
-          <y-button v-bind="btnProps">{{ btnProps.text }}</y-button>
+          <y-button v-bind="btnProps" >{{
+            btnProps.text
+          }}</y-button>
         </template>
         <template #right>
           <y-checkbox label="图标按钮" v-model="iconBtn"></y-checkbox>

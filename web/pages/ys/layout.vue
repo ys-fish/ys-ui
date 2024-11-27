@@ -43,7 +43,11 @@
               快速入门</y-list-item
             >
           </template>
-          <y-list-item>安装</y-list-item>
+          <y-list-item
+            value="/introduction/install"
+            @click="$router.push('/introduction/install')"
+            >安装</y-list-item
+          >
           <y-list-item>常见问题</y-list-item>
           <y-list-item>预置布局</y-list-item>
           <y-list-item>单元测试</y-list-item>
@@ -79,7 +83,7 @@
           <y-list-item @click="$router.push('/components')"
             >全部组件</y-list-item
           >
-          <y-list-item @click="$router.push('/components/buttons')"
+          <y-list-item value="/components/buttons" @click="$router.push('/components/buttons')"
             >按钮(Button)</y-list-item
           >
           <y-list-item @click="$router.push('/components/cards')"

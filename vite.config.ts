@@ -8,7 +8,6 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         // 这里可以放置全局 SCSS 变量、混合等
-        additionalData: `@import "./global/style/global.scss";`,
       },
     },
   },

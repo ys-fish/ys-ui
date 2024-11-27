@@ -19,6 +19,8 @@ import Menu from "../components/Menu";
 import Chip from "../components/Chip";
 import Checkbox from "../components/Checkout";
 import Table from "../components/Table";
+
+// 组件注册
 const ys = [
   Button,
   ProgressCircular,
@@ -40,16 +42,23 @@ const ys = [
   Table,
 ];
 
-// 注册入口
-export const install = (app: App) => {
-  ys.forEach((v) => {
-    app.component(v.name, v);
-  });
-  app.directive("ripple", {
-    mounted(el: any, type: any) {
-      RippleFuc(el, type);
-    },
-  });
+export const createYs = (ysOption: any) => {
+  // 装载方法
+  const install = (app: App) => {
+    ys.forEach((v) => {
+      app.component(v.name, v);
+    });
+    app.directive("ripple", {
+      mounted(el: any, type: any) {
+        RippleFuc(el, type);
+      },
+    });
+  };
+  return {
+    install,
+  };
 };
 
-export default install;
+// 注册入口
+
+export default createYs;
