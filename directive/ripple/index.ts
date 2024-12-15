@@ -29,7 +29,7 @@ const opt = reactive<RippleOption>({
   width: 64,
   height: 64,
   opacity: 1,
-  scale: 0.6,
+  scale: 0.8,
   color: [0, 0, 0, 0.3],
 });
 

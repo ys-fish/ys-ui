@@ -4,7 +4,8 @@ import router from "./router";
 import "../styles/main.scss";
 import "../global/style/global.scss";
 import "./style/index.scss";
-import { createYs } from "../srcipt/index";
+// import { createYs } from "../srcipt/index";
+import { createVueys } from "../srcipt/vueys";
 
-const Ysui = createYs({});
+const Ysui = createVueys({ theme: { defaultTheme: "app", themes: {} } });
 createApp(App).use(Ysui).use(router).mount("#app");

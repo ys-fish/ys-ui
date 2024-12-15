@@ -1,3 +1,4 @@
+import { vueYs } from "../dto/ys";
 import { App } from "vue";
 import Button from "../components/Button/index";
 import ProgressCircular from "../components/ProgressCircular/index";
@@ -20,6 +21,7 @@ import Chip from "../components/Chip";
 import Checkbox from "../components/Checkout";
 import Table from "../components/Table";
 import YApp from "../components/App";
+import { createTheme } from "../composables/theme";
 
 // 组件注册
 const ys = [
@@ -44,7 +46,11 @@ const ys = [
   YApp,
 ];
 
-export const createYs = (ysOption: any) => {
+const createVueys = (option: vueYs) => {
+  const { theme } = option;
+
+  const YTheme = createTheme(theme);
+
   // 装载方法
   const install = (app: App) => {
     ys.forEach((v) => {
@@ -61,6 +67,4 @@ export const createYs = (ysOption: any) => {
   };
 };
 
-// 注册入口
-
-export default createYs;
+export { createVueys };

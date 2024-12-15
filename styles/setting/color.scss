@@ -60,7 +60,7 @@ $pink: (
   "pink-11": #ff80ab,
   "pink-12": #ff4081,
   "pink-13": #f50057,
-  "pink": #c51162,
+  "pink": #c51162,  
 );
 
 @each $name, $color in $pink {
@@ -71,3 +71,4 @@ $pink: (
     background: $color !important;
   }
 }
+
