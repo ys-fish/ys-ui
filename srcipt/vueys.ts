@@ -1,4 +1,4 @@
-import { vueYs } from "../dto/ys";
+import { vueYs } from "../dto/theme";
 import { App } from "vue";
 import Button from "../components/Button/index";
 import ProgressCircular from "../components/ProgressCircular/index";
@@ -21,7 +21,7 @@ import Chip from "../components/Chip";
 import Checkbox from "../components/Checkout";
 import Table from "../components/Table";
 import YApp from "../components/App";
-import { createTheme } from "../composables/theme";
+import { createTheme, useTheme } from "../composables/theme";
 
 // 组件注册
 const ys = [
@@ -50,7 +50,7 @@ const createVueys = (option: vueYs) => {
   const { theme } = option;
 
   //  注册主题方法
-  createTheme(theme);
+  const DefaultTheme = createTheme(theme);
 
   // 装载方法
   const install = (app: App) => {
@@ -65,7 +65,8 @@ const createVueys = (option: vueYs) => {
   };
   return {
     install,
+    DefaultTheme,
   };
 };
 
-export { createVueys };
+export { createVueys, useTheme };

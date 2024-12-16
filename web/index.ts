@@ -13,8 +13,6 @@ const Ysui = createVueys({
     themes: {
       dark: {
         color: {
-          surface: "red",
-          asd: "1231",
         },
       },
       ak: {

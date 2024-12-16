@@ -1,8 +1,13 @@
-import { ThemeDefinition } from "../dto/ys";
+import { ThemeDefinition, Themes } from "../dto/theme";
 import { nextTick } from "vue";
 
-let defaultThemeColor = {
+let defaultThemeColor: Themes = {
   dark: {
+    color: {
+      surface: "#000000",
+    },
+  },
+  light: {
     color: {
       surface: "#ffffff",
     },
@@ -10,24 +15,21 @@ let defaultThemeColor = {
 };
 
 const createTheme = (theme: ThemeDefinition) => {
-  let defautlTheme = theme?.defaultTheme || "vueYs";
+  let defautlTheme = theme?.defaultTheme || "light";
 
   let defaultThemeName = defautlTheme;
 
   for (const key in theme.themes) {
-    // 如果 mainObj 中没有该键，则直接新增
     if (!defaultThemeColor[key]) {
       defaultThemeColor[key] = {};
     }
 
-    // 如果 mainObj[key] 和 dynamicObj[key] 都有 color 属性，合并 color 属性
     if (theme.themes[key].color) {
       defaultThemeColor[key].color = {
-        ...defaultThemeColor[key].color, // 保留 mainObj 中的 color 属性
-        ...theme.themes[key].color, // 合并 dynamicObj 中的 color，覆盖同名属性
+        ...defaultThemeColor[key].color,
+        ...theme.themes[key].color,
       };
     } else {
-      // 如果没有 color 属性，直接添加 dynamicObj 的内容
       defaultThemeColor[key] = {
         ...defaultThemeColor[key],
         ...theme.themes[key],
@@ -36,9 +38,7 @@ const createTheme = (theme: ThemeDefinition) => {
   }
 
   let newDefaultTheme =
-    defaultThemeColor[defaultThemeName] || defaultThemeColor.dark;
-
-  console.log(newDefaultTheme);
+    defaultThemeColor[defaultThemeName] || defaultThemeColor.light;
 
   Object.keys(newDefaultTheme.color).forEach((v: string) => {
     setProperty("#vueYs", v, newDefaultTheme.color[v]);
@@ -53,4 +53,17 @@ const setProperty = (dom: string, color: string, value: string) => {
   });
 };
 
-export { createTheme };
+const useTheme = () => {
+  let themeObj = {
+    switch(theme: string) {
+      let newDefaultTheme = defaultThemeColor[theme] || defaultThemeColor.light;
+
+      Object.keys(newDefaultTheme.color).forEach((v: string) => {
+        setProperty("#vueYs", v, newDefaultTheme.color[v]);
+      });
+    },
+  };
+  return themeObj;
+};
+
+export { createTheme, useTheme };

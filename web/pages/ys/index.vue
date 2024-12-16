@@ -14,15 +14,13 @@
             <y-button type="text" endIcon="chevron-down">学习</y-button>
           </template>
           <y-list size="small">
-            <y-list-item
-              value="Api"
+            <y-list-item value="Api"
               >组件Api
               <template #append>
                 <y-icon icon="code-braces"></y-icon>
               </template>
             </y-list-item>
-            <y-list-item
-            value="color"
+            <y-list-item value="color"
               >颜色
               <template #append>
                 <y-icon icon="palette"></y-icon>
@@ -37,6 +35,7 @@
           </y-list>
         </y-menu>
         <y-button type="text">支持</y-button>
+        <y-button type="text" icon="theme-light-dark"></y-button>
         <!-- <y-button icon="github"></y-button> -->
       </div>
     </template>
