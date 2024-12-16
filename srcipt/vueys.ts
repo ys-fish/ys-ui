@@ -49,7 +49,8 @@ const ys = [
 const createVueys = (option: vueYs) => {
   const { theme } = option;
 
-  const YTheme = createTheme(theme);
+  //  注册主题方法
+  createTheme(theme);
 
   // 装载方法
   const install = (app: App) => {

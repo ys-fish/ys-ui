@@ -7,5 +7,22 @@ import "./style/index.scss";
 // import { createYs } from "../srcipt/index";
 import { createVueys } from "../srcipt/vueys";
 
-const Ysui = createVueys({ theme: { defaultTheme: "app", themes: {} } });
+const Ysui = createVueys({
+  theme: {
+    defaultTheme: "app",
+    themes: {
+      dark: {
+        color: {
+          surface: "red",
+          asd: "1231",
+        },
+      },
+      ak: {
+        color: {
+          surface: "red",
+        },
+      },
+    },
+  },
+});
 createApp(App).use(Ysui).use(router).mount("#app");
